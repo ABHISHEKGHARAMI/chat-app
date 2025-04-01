@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # adding the app for personal
-    
+    # adding the app for chat
+    'chat.apps.ChatConfig',
 ]
 
 MIDDLEWARE = [
