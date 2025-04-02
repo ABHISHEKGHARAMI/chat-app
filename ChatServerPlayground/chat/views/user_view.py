@@ -148,11 +148,19 @@ def editProfile(request):
             request.user.save()
             success_message = "profile updated successfully"
             
+    # Pre-fill the form with the user's existing data
+    initial_data = {
+        "email": request.user.email,
+        "username": request.user.username,
+    }
+            
     return render(
         request,
         'edit.html',
         {
-            
+            "initial_data": initial_data,
+            "success_message": success_message,
+            "error_message": error_message,
         }
     )
 
