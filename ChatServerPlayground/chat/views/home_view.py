@@ -111,7 +111,7 @@ def userprofile(request,username):
     
     return render(
         request,
-        'friends.html',
+        'friend.html',
         {
             'user_details' : user_details
         }
